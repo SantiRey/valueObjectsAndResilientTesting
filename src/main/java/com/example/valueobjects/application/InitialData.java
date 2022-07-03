@@ -5,7 +5,7 @@ import com.example.valueobjects.entity.customer.Customer;
 import com.example.valueobjects.entity.customer.valueObject.Address;
 import com.example.valueobjects.entity.customer.valueObject.FirstName;
 import com.example.valueobjects.entity.customer.valueObject.LastName;
-import com.example.valueobjects.entity.customer.valueObject.PhoneNummer;
+import com.example.valueobjects.entity.customer.valueObject.PhoneNumber;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -26,7 +26,7 @@ public class InitialData implements ApplicationListener<ApplicationReadyEvent> {
                 Customer.builder()
                         .firstName(FirstName.builder().firstName("Kevin").build())
                         .lastName(LastName.builder().lastName("Rey").build())
-                        .phoneNummer(PhoneNummer.builder().phoneNummer("300-458-2303").build())
+                        .phoneNumber(PhoneNumber.builder().phoneNumber("300-458-2303").build())
                         .address(
                                 Arrays.asList(Address.builder().addressNummer("2").street("false").build(),
                                     Address.builder().addressNummer("4").street("false").build())

@@ -1,4 +1,4 @@
-package com.example.valueobjects.Infrastructur;
+package com.example.valueobjects.Infrastructur.controller;
 
 import com.example.valueobjects.application.request.CustomerRegistrationRequest;
 import lombok.extern.slf4j.Slf4j;
@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("api/v1/customer-registration")
+@RequestMapping("api/v1/customer-resgistration")
 public class CustomerController {
     @PostMapping
     public void registerCustomer(
             @RequestBody
             CustomerRegistrationRequest customerRegistrationRequest){
+        log.info("Resquest summited"+ customerRegistrationRequest);
 
     }
 }

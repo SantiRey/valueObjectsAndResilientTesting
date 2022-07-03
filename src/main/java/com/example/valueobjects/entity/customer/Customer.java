@@ -3,7 +3,7 @@ package com.example.valueobjects.entity.customer;
 import com.example.valueobjects.entity.customer.valueObject.Address;
 import com.example.valueobjects.entity.customer.valueObject.FirstName;
 import com.example.valueobjects.entity.customer.valueObject.LastName;
-import com.example.valueobjects.entity.customer.valueObject.PhoneNummer;
+import com.example.valueobjects.entity.customer.valueObject.PhoneNumber;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -41,7 +41,7 @@ public class Customer {
     LastName lastName;
 
     @Embedded
-    PhoneNummer phoneNummer;
+    PhoneNumber phoneNumber;
 
     @ElementCollection(targetClass = Address.class, fetch = FetchType.EAGER)
     List<Address> address = new ArrayList<>();
