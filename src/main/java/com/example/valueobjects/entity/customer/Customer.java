@@ -11,6 +11,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
+import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -41,6 +42,7 @@ public class Customer {
     LastName lastName;
 
     @Embedded
+    @Column(nullable = false, unique = true)
     PhoneNumber phoneNumber;
 
     @ElementCollection(targetClass = Address.class, fetch = FetchType.EAGER)
